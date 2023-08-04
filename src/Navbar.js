@@ -7,7 +7,7 @@ export default function Navbar() {
         Dashboard
       </Link>
       <ul>
-        <CustomLink to="/about">About</CustomLink>
+        <CustomLink to="/signout">Profile</CustomLink>
       </ul>
     </nav>
   )

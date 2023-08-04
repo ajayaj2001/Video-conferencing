@@ -40,11 +40,13 @@ const registerWithEmailAndPassword = async (name,userType, email, password) => {
     const user = res.user;
     await addDoc(collection(db, "users"), {
       uid: user.uid,
-      name,
+      displayName:name,
       user_type:userType,
       authProvider: "local",
       email,
-      is_active: false
+      is_active: false,
+      phoneNumber:"",
+      photoURL:"https://media.istockphoto.com/id/1327592449/vector/default-avatar-photo-placeholder-icon-grey-profile-picture-business-man.jpg?s=612x612&w=0&k=20&c=yqoos7g9jmufJhfkbQsk-mdhKEsih6Di4WZ66t_ib7I="
     });
   } catch (err) {
     console.error(err);

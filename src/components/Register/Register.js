@@ -27,7 +27,7 @@ function Register() {
 
   useEffect(() => {
     if (loading) return;
-    if (user) navigate("/dashboard");
+    if (user) navigate("/user-list");
   }, [user, loading]);
 
   return (

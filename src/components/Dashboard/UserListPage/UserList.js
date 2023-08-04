@@ -39,9 +39,9 @@ function UserListPage () {
                     {
                         [userlist].map((data) => {
                         return(
-                        <tr key={data?.customer_uid}>
+                        <tr key={data?.uid}>
                         <td className="px-3 py-4 w-p-20">
-                            <div className="text-black-900 font-semibold text-sm">{data.name}</div> 
+                            <div className="text-black-900 font-semibold text-sm">{data.displayName}</div> 
                         </td>
                         <td className="whitespace-nowrap px-3 py-4 w-p-20">
                         <div className='font-semibold text-sm mt-2' style={{fontWeight: 400}}>{data.email}</div>
@@ -51,7 +51,7 @@ function UserListPage () {
                             <div className="text-black-900 font-semibold text-sm">{data.user_type}</div> 
                         </td>
                         <td className="px-3 py-4 w-p-20">
-                            <div className="text-black-900 font-semibold text-sm">{data.user_type}</div> 
+                            <div className="text-black-900 font-semibold text-sm">{data.is_active ? "Active" : "InActive"}</div> 
                         </td>
                         </tr>)
                         })
