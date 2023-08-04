@@ -1,10 +1,10 @@
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Login from "./Login";
-import Register from "./Register";
+import Login from "./components/Login/Login";
+import Register from "./components/Register/Register";
 import Reset from "./Reset";
-import Dashboard from "./Dashboard";
-import UserListPage from "./UserListPage"
+import Signout from "./components/Dashboard/Signout/signoutpage";
+import UserListPage from "./components/Dashboard/UserListPage/UserList"
 function App() {
   return (
     <div className="app">
@@ -14,9 +14,8 @@ function App() {
           <Route exact path="/" element={<Login />} />
           <Route exact path="/register" element={<Register />} />
           <Route exact path="/reset" element={<Reset />} />
-          <Route exact path="/dashboard" element={<Dashboard />} />
+          <Route exact path="/signout" element={<Signout />} />
           <Route exact path="/user-list" element={<UserListPage />} />
-          <Route exact path="/dashboard" element={<Dashboard />} />
         </Routes>
       </Router>
     </div>

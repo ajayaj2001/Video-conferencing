@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { db } from "./firebase";
+import { db } from "../../../firebase";
 import { query, collection, getDocs, where } from "firebase/firestore";
-import Navbar from "./Navbar";
+import Navbar from "../../../Navbar";
 
 function UserListPage () {
     let [userlist, setUserList] = useState({})

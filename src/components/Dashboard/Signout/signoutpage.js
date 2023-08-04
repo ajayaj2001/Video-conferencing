@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate } from "react-router-dom";
-import "./Dashboard.css";
-import { auth, db, logout } from "./firebase";
+import "./signout.css";
+import { auth, db, logout } from "../../../firebase";
 import { query, collection, getDocs, where } from "firebase/firestore";
-import Navbar from "./Navbar"
 
-function Dashboard() {
+function Signout() {
   const [user, loading] = useAuthState(auth);
   const [name, setName] = useState("");
   const navigate = useNavigate();
@@ -32,13 +31,12 @@ function Dashboard() {
   }, [user, loading]);
 
   return (
-    <div className="dashboard">
-      <Navbar />
-      <div className="dashboard__container">
+    <div className="signout">
+      <div className="signout__container">
         Logged in as
         <div>{name}</div>
         <div>{user?.email}</div>
-        <button className="dashboard__btn" onClick={logout}>
+        <button className="signout__btn" onClick={logout}>
           Logout
         </button>
       </div>
@@ -46,4 +44,4 @@ function Dashboard() {
   );
 }
 
-export default Dashboard;
+export default Signout;

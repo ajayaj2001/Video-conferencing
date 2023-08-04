@@ -3,11 +3,10 @@ import "./Navbar.css";
 export default function Navbar() {
   return (
     <nav className="nav">
-      <Link to="/" className="site-title">
+      <Link to="/user-list" className="site-title">
         Dashboard
       </Link>
       <ul>
-        <CustomLink to="/user-list">Users</CustomLink>
         <CustomLink to="/about">About</CustomLink>
       </ul>
     </nav>
